@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+	--bg_main: #231945;
+	--bg_secondary: #403762;
+	--bg_light: #433d6d;
+
+	--box_bg: #433d627e;
+	--box_bg_hover: #433d62dd;
+	--box_border: rgba(200, 200, 200, 0.2);
+	--box_border_hover: rgba(200, 200, 200, 0.5);
+
+	--accent: #5dd878;
+	--accent_darker: #42a858;
+	--accent_dark: #004422;
+
+	--canvas_bg: #27253a;
+
+	--white: #f1efff;
+	--light_gray: #ccdddd;
+	--gray: #a0aaaa;
+	--black: #0e0f0f;
+}
+
+body {
+	font-family: "Mukta";
+	background: var(--bg_main);
+	color: var(--white);
+	display: block;
+}
+
+break {
+	display: block;
+	margin-bottom: 1em;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 900;
+	text-align: center;
+	margin: 0;
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+a {
+	display: inline-block;
+	background: var(--bg_light);
+	color: var(--white);
+	border-radius: 3px;
+	margin: 0 0.3rem;
+	text-align: center;
+	line-height: 1.3rem;
+
+	outline: 1px solid var(--light_gray);
+}
+
+.block {
+	text-align: left;
+	display: inline-block;
+	background-color: var(--box_bg);
+	border-radius: 3px;
+	padding: 10px;
+	margin: 10px;
+
+	border: 1px solid var(--box_border);
+}
+
+.block_hoverable:hover {
+	border-color: var(--box_border_hover);
+	scale: 1.02;
+	translate: 10px 0;
+	background: var(--box_bg_hover);
+
+	transition-property: scale, translate, background, border;
+	transition: 0.3s ease-out;
+}
+
+.accent, button, input[type="submit"], .go_back_button {
+	display: inline-block;
+	background: var(--bg_light);
+	color: var(--white);
+	padding: 5px;
+	border-radius: 3px;
+	text-align: center;
+	font-weight: 500;
+	text-decoration: none;
+
+	outline: 1px solid var(--light_gray);
+
+	transition-property: background, color;
+	transition-duration: 0.2s;
+}
+
+button, input[type="submit"] {
+	border: none;
+}
+
+.accent:hover, button:hover, input[type="submit"]:hover, .go_back_button:hover {
+	background: var(--accent);
+	color: var(--black);
+	outline: 1px solid var(--white);
+	cursor: pointer;
+}
+
+#canvas, canvas {
+	display: inline-block;
+	background-color: var(--canvas_bg);
+	border-radius: 3px;
+	border: 1px solid var(--box_border);
+}
+
+.text_in_box {
+	margin-right: 10px;
+	font-weight: 400;
+}
+
+st {
+	font-size: 14px;
+	color: var(--gray);
+	font-weight: 100;
+}
+
+cb {
+	background: #00000033;
+	color: var(--gray);
+	margin: 2px 2px 2px 2px;
+	padding: 2px 2px 2px 2px;
+	border-radius: 5px;
+}
+
+.go_back_button {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.tooltip_button_container {
+	position: relative;
+}
+
+.button_with_tooltip + .button_tooltip {
+	display: none;
+	position: absolute;
+
+	background: var(--bg_secondary);
+	border: 1px solid var(--box_border_hover);
+	border-radius: 3px;
+
+	padding: 0.25rem;
+
+	left: calc(100% + 20px);
+	width: max-content;
+}
+
+#main {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+input[type="text"] {
+	display: inline-block;
+	background: var(--bg_light);
+	color: var(--white);
+	padding: 2px;
+	border-radius: 3px;
+	text-align: center;
+	font-weight: 500;
+	text-decoration: none;
+
+	border: 1px solid var(--light_gray);
+}
+
+#input {
+	max-width: 500px;
+}
+
+@media screen and (width >= 600px) {
+	.button_with_tooltip:hover + .button_tooltip {
+		display: initial;
+	}
+}
+
+@media handheld, (width < 600px) {
+	.button_with_tooltip + .button_tooltip {
+		position: initial;
+		display: block;
+		width: auto;
+	}
+
+	.accent {
+		background: var(--accent);
+		color: var(--black);
+		outline: 1px solid var(--white);
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 900;
+	}
+}

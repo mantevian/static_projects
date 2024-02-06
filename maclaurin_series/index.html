@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="X-Content-Type-Options" content="nosniff">
+	<meta charset="utf-8" />
+	<title>maclaurin series</title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.1/math.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" href="../styles/general.css">
+</head>
+
+<body style="background: #29253c;">
+	<h1>maclaurin series</h1>
+	<div id="main">
+		<div id="canvas-container"></div>
+		<div id="input" class="block">
+			take a look at <a href="https://mathjs.org/docs/index.html">math.js docs</a> for help with functions
+			<br>
+			no checks are performed here whatsoever, the window might often get frozen because of derivative calculations
+			<br><br>
+
+			evaluated function: <input type="text" id="evaluated_function" size="40" value="sin(x)"/>
+			<br>
+
+			polynomial's degree: 0 <input type="range" min="1" max="30" value="10" class="slider" id="degree" oninput="start_generating()">
+			<input type="text" size="3" id="max_degree" value="30" oninput="change_max_degree()" />
+			(selected: <span id="selected_degree">10</span>)
+			<br>
+
+			precision: <input type="text" id="precision" size="10" value="0.1">
+			<br>
+
+			scale: <input type="text" id="scale" size="10" value="10">
+			<br>
+
+			<button id="button" onclick="start_generating()">
+				Generate
+			</button>
+		</div>
+	</div>
+	<a class="go_back_button" href="../">go back</a>
+</body>
+
+</html>

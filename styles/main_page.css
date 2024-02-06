@@ -1,0 +1,46 @@
+.block {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 10px;
+}
+
+#header {
+	margin: 50px 0 50px 0;
+}
+
+#content-container {
+	display: flex;
+	gap: 20px;
+	justify-content: flex-start;
+	width: fit-content;
+}
+
+@media handheld, (width < 600px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	a.accent {
+		font-size: 1.2em;
+	}
+
+	#header {
+		margin: 20px 0 20px 0;
+	}
+
+	#links img {
+		width: 80px;
+	}
+
+	.block {
+		gap: 25px;
+		align-items: flex-start;
+	}
+
+	#main {
+		display: block;
+	}
+}

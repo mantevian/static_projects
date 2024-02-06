@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="X-Content-Type-Options" content="nosniff">
+	<meta charset="utf-8" />
+	<title>cubic graphing</title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.1/math.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" href="../styles/general.css">
+</head>
+
+<body style="background: #29253c;">
+	<h1>cubic graphing</h1>
+	<div id="main">
+		<div id="canvas-container"></div>
+		<div id="input" class="block">
+			Enter the formula:
+			<br>
+			<input type="text" id="x1" size="1" value="0"> x +
+			<input type="text" id="x2" size="1" value="0"> x² +
+			<input type="text" id="x3" size="1" value="0"> x³ +
+			<br>
+
+			<input type="text" id="y1" size="1" value="0"> y +
+			<input type="text" id="y2" size="1" value="0"> y² +
+			<input type="text" id="y3" size="1" value="0"> y³ +
+			<br>
+
+			<input type="text" id="x1y1" size="1" value="0"> x y +
+			<input type="text" id="x1y2" size="1" value="0"> x y² +
+			<input type="text" id="x1y3" size="1" value="0"> x y³ +
+			<br>
+
+			<input type="text" id="x2y1" size="1" value="0"> x² y +
+			<input type="text" id="x2y2" size="1" value="0"> x² y² +
+			<input type="text" id="x2y3" size="1" value="0"> x² y³ +
+			<br>
+
+			<input type="text" id="x3y1" size="1" value="0"> x³ y +
+			<input type="text" id="x3y2" size="1" value="0"> x³ y² +
+			<input type="text" id="x3y3" size="1" value="0"> x³ y³ +
+			<br>
+
+			<input type="text" id="a" size="1" value="0">
+			= 0
+			<br>
+			thickness: <input type="text" id="thickness" size="5" value="30">
+		</div>
+	</div>
+	<a class="go_back_button" href="../">go back</a>
+</body>
+
+</html>

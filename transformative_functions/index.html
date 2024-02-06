@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="X-Content-Type-Options" content="nosniff">
+	<meta charset="utf-8" />
+	<title>transformative functions</title>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.1/math.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<link rel="stylesheet" href="../styles/general.css">
+</head>
+
+<body style="background: #29253c;">
+	<h1>transformative functions</h1>
+	<div id="main">
+		<div id="canvas-container"></div>
+		<div id="input" class="block">
+			take a look at <a href="https://mathjs.org/docs/index.html">math.js docs</a> for help with functions
+			<br>
+			there are also 2 custom functions implemented: polygon and circle, you can see their usage in the default example
+			<br>
+			evaluated function: <input type="text" id="evaluated_function" size="40"
+				value="cos(x) * cos(x) * x + sin(x) * 2 + 1">
+			<br>
+
+			input function (x,y): <input type="text" id="input_function_x" size="40" value="polygon(x, 13, 9).x">
+			<input type="text" id="input_function_y" size="40" value="circle(x, 7).y + cos(x) * 3">
+			<br>
+
+			output function (x,y): <input type="text" id="output_function_x" size="40" value="polygon(x, 6, 5).x">
+			<input type="text" id="output_function_y" size="40" value="polygon(x, 6, 5).y">
+			<br>
+
+			limit (function goes through values [-x, x]): <input type="text" id="limit" size="5" value="10">
+			<br>
+
+			interval between each step <input type="text" id="interval" size="5" value="0.01">
+			<br>
+
+			draw x lines per frame: <input type="text" id="lines_per_frame" size="5" value="100">
+			<br>
+
+			line thickness: <input type="text" id="thickness" size="5" value="1">
+			<br>
+
+			<button id="button" onclick="generate()">
+				Generate
+			</button>
+		</div>
+	</div>
+	<a class="go_back_button" href="../">go back</a>
+</body>
+
+</html>
